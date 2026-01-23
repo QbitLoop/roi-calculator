@@ -1,21 +1,39 @@
-/* ROI Calculator Styles */
+/* ROI Calculator Styles - Brand-WHFT Design System */
 :root {
-  --primary: #76b900; /* NVIDIA green */
-  --primary-dark: #5a8f00;
-  --secondary: #1a1a2e;
-  --background: #0f0f1a;
-  --surface: #1a1a2e;
-  --surface-light: #252538;
-  --text: #ffffff;
-  --text-muted: #a0a0b0;
-  --success: #4caf50;
-  --warning: #ff9800;
-  --error: #f44336;
-  --efficiency: #2196f3;
-  --safety: #ff5722;
-  --compliance: #9c27b0;
-  --border-radius: 12px;
-  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  /* Brand-WHFT Colors (FT-Inspired) */
+  --brand-salmon: #FFF1E5;
+  --brand-paper: #FFFFFF;
+  --brand-text: #33302E;
+  --brand-text-secondary: #66605C;
+  --brand-teal: #0D7680;
+  --brand-claret: #990F3D;
+  --brand-border: #E6D9CE;
+  --brand-wheat: #F2DFCE;
+
+  /* Semantic Colors */
+  --primary: var(--brand-claret);
+  --primary-dark: #7a0c31;
+  --secondary: var(--brand-wheat);
+  --background: var(--brand-salmon);
+  --surface: var(--brand-paper);
+  --surface-light: var(--brand-wheat);
+  --text: var(--brand-text);
+  --text-muted: var(--brand-text-secondary);
+
+  /* Status Colors */
+  --success: #34A853;
+  --warning: #ff8200;
+  --error: #cb333b;
+
+  /* Category Colors */
+  --efficiency: var(--brand-teal);
+  --safety: var(--brand-claret);
+  --compliance: #5e4b8b;
+
+  /* Layout */
+  --border-radius: 2px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 * {
@@ -25,7 +43,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 400;
   background: var(--background);
   color: var(--text);
   line-height: 1.6;
@@ -39,22 +58,24 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(135deg, var(--secondary) 0%, var(--surface-light) 100%);
+  background: var(--surface);
   padding: 2rem;
   text-align: center;
   border-bottom: 3px solid var(--primary);
+  box-shadow: var(--shadow);
 }
 
 .header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 300;
   color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
 .subtitle {
   color: var(--text-muted);
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /* Main */
@@ -72,10 +93,11 @@ section {
 }
 
 section h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   color: var(--primary);
-  border-bottom: 2px solid var(--surface-light);
+  border-bottom: 1px solid var(--brand-border);
   padding-bottom: 0.5rem;
 }
 
@@ -84,6 +106,7 @@ section h2 {
   background: var(--surface);
   padding: 2rem;
   border-radius: var(--border-radius);
+  border: 1px solid var(--brand-border);
   box-shadow: var(--shadow);
 }
 
@@ -97,7 +120,7 @@ section h2 {
 
 .input-group label {
   display: block;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--text);
 }
@@ -106,10 +129,11 @@ section h2 {
   width: 100%;
   max-width: 300px;
   padding: 0.75rem 1rem;
-  font-size: 1.1rem;
-  background: var(--surface-light);
-  border: 2px solid transparent;
-  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--surface);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--border-radius);
   color: var(--text);
   transition: border-color 0.2s;
 }
@@ -135,7 +159,7 @@ section h2 {
 
 .use-case-card {
   background: var(--surface);
-  border: 2px solid var(--surface-light);
+  border: 1px solid var(--brand-border);
   border-radius: var(--border-radius);
   padding: 1.25rem;
   cursor: pointer;
@@ -146,11 +170,12 @@ section h2 {
 .use-case-card:hover {
   border-color: var(--primary);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
 }
 
 .use-case-card.selected {
   border-color: var(--primary);
-  background: rgba(118, 185, 0, 0.1);
+  background: rgba(153, 15, 61, 0.05);
 }
 
 .use-case-header {
@@ -161,15 +186,15 @@ section h2 {
 }
 
 .use-case-header input[type="checkbox"] {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   accent-color: var(--primary);
   cursor: pointer;
 }
 
 .use-case-header h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
 }
 
@@ -193,6 +218,7 @@ section h2 {
 .metric strong {
   color: var(--primary);
   font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .metric small {
@@ -204,25 +230,26 @@ section h2 {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 0.25rem 0.75rem;
-  border-radius: 20px;
-  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .category-badge.efficiency {
-  background: rgba(33, 150, 243, 0.2);
+  background: rgba(13, 118, 128, 0.15);
   color: var(--efficiency);
 }
 
 .category-badge.safety {
-  background: rgba(255, 87, 34, 0.2);
+  background: rgba(153, 15, 61, 0.15);
   color: var(--safety);
 }
 
 .category-badge.compliance {
-  background: rgba(156, 39, 176, 0.2);
+  background: rgba(94, 75, 139, 0.15);
   color: var(--compliance);
 }
 
@@ -239,11 +266,13 @@ section h2 {
   padding: 1.5rem;
   border-radius: var(--border-radius);
   text-align: center;
+  border: 1px solid var(--brand-border);
   box-shadow: var(--shadow);
 }
 
 .result-card.primary {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 .result-card.primary .result-label,
@@ -254,15 +283,16 @@ section h2 {
 
 .result-label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 .result-value {
   display: block;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 300;
   color: var(--text);
   margin-bottom: 0.25rem;
 }
@@ -282,11 +312,13 @@ section h2 {
   background: var(--surface);
   padding: 1.5rem;
   border-radius: var(--border-radius);
+  border: 1px solid var(--brand-border);
   margin-bottom: 2rem;
 }
 
 .cost-breakdown h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   color: var(--text);
 }
@@ -298,7 +330,7 @@ section h2 {
 
 .cost-breakdown td {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid var(--surface-light);
+  border-bottom: 1px solid var(--brand-border);
 }
 
 .cost-breakdown td:first-child {
@@ -307,13 +339,13 @@ section h2 {
 
 .cost-breakdown td:last-child {
   text-align: right;
-  font-weight: 600;
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-weight: 500;
+  font-family: 'Roboto Mono', 'SF Mono', monospace;
 }
 
 .cost-breakdown tr.total td {
   border-top: 2px solid var(--primary);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .positive {
@@ -329,10 +361,12 @@ section h2 {
   background: var(--surface);
   padding: 1.5rem;
   border-radius: var(--border-radius);
+  border: 1px solid var(--brand-border);
 }
 
 .category-summary h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 1rem;
   color: var(--text);
 }
@@ -354,7 +388,7 @@ section h2 {
 }
 
 .category-name {
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
 }
 
@@ -372,19 +406,19 @@ section h2 {
 
 .category-amount {
   color: var(--text-muted);
-  font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-family: 'Roboto Mono', 'SF Mono', monospace;
 }
 
 .category-bar-track {
-  height: 12px;
-  background: var(--surface-light);
-  border-radius: 6px;
+  height: 8px;
+  background: var(--brand-wheat);
+  border-radius: 4px;
   overflow: hidden;
 }
 
 .category-bar-fill {
   height: 100%;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: width 0.5s ease-out;
 }
 
@@ -405,12 +439,13 @@ section h2 {
   background: var(--surface);
   padding: 1.5rem;
   text-align: center;
-  border-top: 1px solid var(--surface-light);
+  border-top: 1px solid var(--brand-border);
 }
 
 .footer a {
-  color: var(--primary);
+  color: var(--brand-teal);
   text-decoration: none;
+  font-weight: 500;
 }
 
 .footer a:hover {
@@ -423,10 +458,25 @@ section h2 {
   margin-top: 0.5rem;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-wheat);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .main {
