@@ -1,5 +1,11 @@
 # AI Solutions ROI Calculator
 
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-6.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live-222222?style=for-the-badge&logo=github&logoColor=white)](https://qbitloop.github.io/roi-calculator/)
+[![License](https://img.shields.io/badge/License-MIT-990F3D?style=for-the-badge)](LICENSE)
+
 Interactive calculator for estimating cost savings from Voice AI and Intelligent Automation deployments in public safety agencies.
 
 ## Live Demo
